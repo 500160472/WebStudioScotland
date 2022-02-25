@@ -1,1 +1,105 @@
 # WebStudioScotland
+
+This is the main app folder frr Lomond Improvements
+
+The app structure is as follows
+
+APP [####Main]
+    -Login [DONE]
+    -LoggedIn
+        -Homepage [####Main]
+            -Leads
+                - FetchLeads
+                  - Choose Product
+                    - Roofing [####Main]
+                      - Company OverView
+                        - Company Overview
+                        - Product OverView
+                        - Installation
+                        - Typical Weaknesses
+                        - Product Guarantee
+                      - Reasons For Change
+                      - Showhome
+                      - Product Dem
+                        - Showcase Product
+                        - Roofing Products
+                        - Roofing Products installation
+                      - Market Dem
+                        - 1
+                        - 2
+                      - Finance Dem
+                        - 1
+                        - 2
+                        - 3
+                      - Summary
+                        - End Lead
+                        - Generate Contract [Main]
+                          - Design Image
+                            - Input Information
+                              - Verify
+                              - Send
+                              - Upload Images
+                                - Upload Form for images and contract
+                                  <!-- - Deal submitted
+                    - Roughcasting
+                      - Company OverView
+                        - Company Overview
+                        - Product OverView
+                        - Installation
+                        - Typical Weaknesses
+                        - Product Guarantee
+                      - Reasons For Change
+                      - Showhome
+                      - Product Dem
+                        - Showcase Product
+                        - Roofing Products
+                        - Roofing Products installation
+                      - Market Dem
+                        - 1
+                        - 2
+                      - Finance Dem
+                        - 1
+                        - 2
+                        - 3
+                      - Summary
+                        - End Lead
+                        - Generate Contract [Main]
+                          - Design Image
+                            - Input Information
+                              - Verify
+                              - Send
+                              - Upload Images
+                                - Upload Form for images and contract
+                                  - Deal submitted
+                    - Garden Homes
+                      - Company OverView
+                          - Company Overview
+                          - Product OverView
+                          - Installation
+                          - Typical Weaknesses
+                          - Product Guarantee
+                        - Reasons For Change
+                        - Showhome
+                        - Product Dem
+                          - Showcase Product
+                          - Roofing Products
+                          - Roofing Products installation
+                        - Market Dem
+                          - 1
+                          - 2
+                        - Finance Dem
+                          - 1
+                          - 2
+                          - 3
+                        - Summary
+                          - End Lead
+                          - Generate Contract [Main]
+                            - Design Image
+                              - Input Information
+                                - Verify
+                                - Send
+                                - Upload Images
+                                  - Upload Form for images and contract
+                                    - Deal submitted
+            -Deals
+            -Settings -->
