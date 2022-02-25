@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Text, View, KeyboardAvoidingView, StyleSheet, TouchableOpacity, TextInput} from 'react-native';
 import Constants from 'expo-constants';
+import S from '../constants/styles';
 
 
 export default class Page1 extends React.Component {
@@ -22,13 +23,11 @@ export default class Page1 extends React.Component {
           <Text style={styles.loginText}>LOGIN</Text>
           <TextInput style={styles.input}
             placeholder="Username"
-            // placeholderTextColor="#9a73ef"
             onChangeText={(text) => this.setState({username: text})}
             value={this.state.email}
           />
           <TextInput style={styles.input}
             placeholder="Password"
-            // placeholderTextColor="#9a73ef"
             onChangeText={(text) => this.setState({password: text})}
             value={this.state.password}
           />
@@ -49,26 +48,27 @@ export default class Page1 extends React.Component {
 
 const styles = StyleSheet.create({
   
-  keyboard: {backgroundColor: '#0C002E',
-  flex: 1,},
+  keyboard: {
+    backgroundColor: S.colors.lomondBlue,
+    flex: 1,
+},
   container: {
     width: '100%',
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: Constants.statusBarHeight,
-    // backgroundColor: '#ecf0f1',
     padding: 0,
   },
   loginText: {
     fontSize: 30,
-    color: '#281670',
+    color: S.colors.lomondBlue,
     textAlign: 'center',
     marginBottom: 20,
   },
 
   header: {
-    backgroundColor: '#281670',
+    backgroundColor: S.colors.dark,
     width: '100%',
     textAlign: 'center',
     padding: 16,
@@ -84,14 +84,14 @@ const styles = StyleSheet.create({
     width: '60%',
     padding: 26,
     marginTop: 32,
-    backgroundColor: 'white',
+    backgroundColor: S.colors.white,
     borderRadius: 8,
   },
   input: {
     width: '100%',
     // height: 40,
     fontSize: 16,
-    borderColor: '#07A8FE',
+    borderColor:  S.colors.lightBlue,
     borderWidth: 1,
     borderRadius: 8,
     padding: 12,
@@ -99,18 +99,10 @@ const styles = StyleSheet.create({
   },
   button: {
     width: '100%',
-    backgroundColor: '#07A8FE',
+    backgroundColor:  S.colors.lightBlue,
     padding: 12,
     borderRadius: 8,
     marginTop: 16,
   },
   
 });
-
-
-
-// #FDFDFF
-// #07A8FE
-// #281670
-// #0C002E
-// #2D3840
