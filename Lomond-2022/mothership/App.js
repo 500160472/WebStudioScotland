@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 import Login from './src/screens/Login';
-import Main from './src/screens/Main';
+import Main from './src/navigation/Main';
 
 
 //My snacks are at: https://expo.io/snacks/@uni

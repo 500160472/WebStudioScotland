@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
-import Page1 from './Page1';
-import Page2 from './Page2';
+import Page1 from '../screens/Page1';
+import Page2 from '../screens/Page2';
 
 
 //My snacks are at: https://expo.io/snacks/@uni

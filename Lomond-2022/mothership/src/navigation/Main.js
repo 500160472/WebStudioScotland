@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
-import Page1 from './Page1';
-import Page2 from './Page2';
+import Page1 from '../screens/Page1';
+import Page2 from '../screens/Page2';
+import Settings from '../screens/Settings';
 
 
 //My snacks are at: https://expo.io/snacks/@uni
@@ -19,6 +20,9 @@ export default class Main extends React.Component {
     }
     if (this.state.page === 2) {
       return (<Page2 pageChange={(pageNum) => this.setState({page: pageNum})} />);
+    }
+    if (this.state.page === 3) {
+      return (<Settings pageChange={(pageNum) => this.setState({page: pageNum})} />);
     }
   }
 
