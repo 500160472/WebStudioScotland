@@ -13,12 +13,13 @@ render() {
       </View>
       <View style={styles.profile}>
         <Text style={styles.profileText}>
-          Welcome to the home page - {this.props.response[0].username} - 
-          {this.props.response[0].FullName}
-          {this.props.response[0].email}
-          {this.props.response[0].phone}
-          
+          Welcome, {this.props.response[0].username}{"\n"} 
         </Text>
+        <Text style={styles.infoText}>
+          Rep Name: {this.props.response[0].FullName}{"\n"}
+          Rep Email: {this.props.response[0].email}{"\n"}
+          Rep Number: {this.props.response[0].phone}{"\n"}
+          </Text>
       </View>
         <View style={styles.container}>
         <TouchableOpacity style={S.button} onPress={()=> this.props.pageChange(2)}>
@@ -55,6 +56,12 @@ const styles = StyleSheet.create({
   profileText:{
     color: S.colors.white,
     fontSize: 20,
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  infoText:{
+    color: S.colors.white,
+    fontSize: 16,
     textAlign: 'center',
     fontWeight: 'bold',
   },

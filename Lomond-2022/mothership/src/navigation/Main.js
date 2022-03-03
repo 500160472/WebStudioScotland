@@ -12,18 +12,19 @@ import Settings from '../screens/Settings';
 export default class Main extends React.Component {
   state = {
     page: 1,
+    leads: {},
   };
 
   pickPageToRender = () => {
     if (this.state.page === 1){
       console.log(this.state.userInfo)
-      return (<Page1 pageChange={(pageNum) => this.setState({page: pageNum})}  response={this.props.response} />);
+      return (<Page1 pageChange={(pageNum) => this.setState({page: pageNum})} response={this.props.response} />);
     }
     if (this.state.page === 2) {
-      return (<Page2 pageChange={(pageNum) => this.setState({page: pageNum})} />);
+      return (<Page2 pageChange={(pageNum) => this.setState({page: pageNum})} leads={(leads) => this.setState({leads: leads})} response={this.props.response} />);
     }
     if (this.state.page === 3) {
-      return (<Settings pageChange={(pageNum) => this.setState({page: pageNum})} />);
+      return (<Settings pageChange={(pageNum) => this.setState({page: pageNum})} response={this.props.response} />);
     }
   }
 

@@ -15,10 +15,7 @@ export default class App extends React.Component {
       username: '',
       password: '',
     },
-    response: {
-      Message: '',
-      FullName: '',
-    },
+    response: { },
   };
 
   autherizedPages = () => {
