@@ -16,7 +16,8 @@ export default class Main extends React.Component {
 
   pickPageToRender = () => {
     if (this.state.page === 1){
-      return (<Page1 pageChange={(pageNum) => this.setState({page: pageNum})} />);
+      console.log(this.state.userInfo)
+      return (<Page1 pageChange={(pageNum) => this.setState({page: pageNum})}  response={this.props.response} />);
     }
     if (this.state.page === 2) {
       return (<Page2 pageChange={(pageNum) => this.setState({page: pageNum})} />);

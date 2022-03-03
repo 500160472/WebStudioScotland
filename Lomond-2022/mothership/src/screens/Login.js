@@ -4,7 +4,54 @@ import Constants from 'expo-constants';
 import S from '../constants/styles';
 
 
-export default class Page1 extends React.Component {
+// create a function for when login button is pressed that connects to mysql database to check if username and password are correct. if correct, then go to main page. if incorrect, then stay on login page
+
+  function login(username, password, props) {
+    var Username = username;
+    var Password = password;
+
+    if ((Username.length==0) || (Password.length==0)){
+      alert("Required Field Is Missing!!!");
+    }else{
+      var APIURL = "https://lomondcrm.co.uk/react/signin.php";
+
+      var headers = {
+        'Accept' : 'application/json',
+        'Content-Type' : 'application/json'
+      };
+            
+      var Data ={
+        Username: Username,
+        Password: Password
+      };
+
+      fetch(APIURL,{
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(Data)
+      })
+      .then((Response)=>Response.json())
+      .then((Response)=>{
+        // alert(Response)
+        alert(Response[0].Message)
+        if (Response[0].Message == "Success") {
+          // console.log(Response[0].FullName)
+          props.response(Response);
+          props.authenticated(true);
+          props.userInfo(Data);
+        }
+        // console.log(Data);
+      })
+      .catch((error)=>{
+        console.error("ERROR FOUND" + error);
+      })
+    }
+  }
+
+
+
+
+export default class Login extends React.Component {
 //pageChange prop from App.js
   state = {
     username: '',
@@ -24,16 +71,14 @@ export default class Page1 extends React.Component {
           <TextInput style={styles.input}
             placeholder="Username"
             onChangeText={(text) => this.setState({username: text})}
-            value={this.state.email}
+            value={this.state.Username}
           />
           <TextInput style={styles.input}
             placeholder="Password"
             onChangeText={(text) => this.setState({password: text})}
             value={this.state.password}
           />
-        <TouchableOpacity style={styles.button} onPress={() => {if (this.state.username === 'Admin' && this.state.password === 'Admin') {
-      this.props.authenticated(true);
-      }}}>
+        <TouchableOpacity style={styles.button} onPress={() => {login(this.state.username, this.state.password, this.props)}}>
           <Text style={{textAlign: 'center'}}>
             Submit
           </Text>

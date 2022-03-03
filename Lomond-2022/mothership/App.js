@@ -10,15 +10,25 @@ import Main from './src/navigation/Main';
 
 export default class App extends React.Component {
   state = {
-    authenticated: false
+    authenticated: false,
+    userInfo: {
+      username: '',
+      password: '',
+    },
+    response: {
+      Message: '',
+      FullName: '',
+    },
   };
 
   autherizedPages = () => {
     if (this.state.authenticated === false){
-      return (<Login authenticated={(authenticated) => this.setState({authenticated: authenticated})} />);
+      return (<Login authenticated={(authenticated) => this.setState({authenticated: authenticated})}  userInfo={(userInfo) => this.setState({userInfo: userInfo})} response={(response) => this.setState({response: response})}/>);
     }
     if (this.state.authenticated === true) {
-      return (<Main authenticated={(authenticated) => this.setState({authenticated: authenticated})} />);
+      // console.log("hey" + userinfo);
+      // console.log('HELLO '+ this.state.userInfo.Username);
+      return (<Main authenticated={(authenticated) => this.setState({authenticated: authenticated})} userInfo={this.state.userInfo} response={this.state.response}/>);
     }
   }
 
