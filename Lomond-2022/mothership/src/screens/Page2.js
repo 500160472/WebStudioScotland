@@ -20,19 +20,67 @@ import Constants from 'expo-constants';
 //     });
 // }
 
+function leads(repName) {
 
+    var APIURL = "https://lomondcrm.co.uk/react/suite.php";
 
+    var headers = {
+      'Accept' : 'application/json',
+      'Content-Type' : 'application/json'
+    };
+          
+    var Data ={
+      repName: repName
+    };
 
-export default class Page2 extends React.Component {
-//pageChange prop from App.js
-  render() {
+    fetch(APIURL,{
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(Data)
+    })
+    .then((Response)=>Response.json())
+    .then((Response)=>{
+          
+      
+      alert(Response[0].id)
+      // alert(Response[0].Message)
+      // if (Response[0].Message == "Success") {
+        // console.log(Response[0].FullName)
+        // props.response(Response);
+        // props.authenticated(true);
+        // props.userInfo(Data);
+      // }
+      Response.map((item, index) => {
+      console.log(item);})
+    })
+    .catch((error)=>{
+      console.error("ERROR FOUND" + error);
+    })
+  }
+
+  
+  
+  export default class Page2 extends React.Component {
+    //pageChange prop from App.js
+    render() {
+
+        leads(this.props.response[0].username)
+        /* attach listeners to google StreetView */
+        // const streetView = this.getStreetView()
+        // window.google.maps.event.addListener(streetView, 'zoomChanged', this.handlePovChanged())
+
     return (
       <View style={styles.container}>
         <Text> page 2</Text>
         <TouchableOpacity onPress={()=> this.props.pageChange(1)}>
           <Text>
-          {this.props.response[0].FullName} ---- 
+          {/* {this.props.response[0].FullName} ----  */}
             Go to page 1
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => leads(this.props.response[0].username)}>
+          <Text style={{textAlign: 'center'}}>
+            Submit
           </Text>
         </TouchableOpacity>
 
