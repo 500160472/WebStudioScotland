@@ -9,27 +9,27 @@ render() {
     return (
     <View style={styles.page}>
       <View style={S.headerBar}>
-        <Text style={S.headerText}>HOMEPAGE</Text>
+        <Text style={S.headerText}>HOMEPAGE - LOGGED IN</Text>
       </View>
       <View style={styles.profile}>
         <Text style={styles.profileText}>
           Welcome, {this.props.response[0].username}{"\n"} 
         </Text>
         <Text style={styles.infoText}>
-          Rep Name: {this.props.response[0].FullName}{"\n"}
-          Rep Email: {this.props.response[0].email}{"\n"}
-          Rep Number: {this.props.response[0].phone}{"\n"}
+          Name: {this.props.response[0].FullName}{"\n"}
+          Email: {this.props.response[0].email}{"\n"}
+          Number: {this.props.response[0].phone}{"\n"}
           </Text>
       </View>
         <View style={styles.container}>
         <TouchableOpacity style={S.button} onPress={()=> this.props.pageChange(2)}>
           <Text style={S.buttonText}>
-            LEADS
+            PAGE 2
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={S.button} onPress={()=> this.props.pageChange(2)}>
+        <TouchableOpacity style={S.button} onPress={()=> this.props.pageChange(3)}>
           <Text style={S.buttonText}>
-            DEALS
+            SETTINGS
           </Text>
         </TouchableOpacity>
       </View>
