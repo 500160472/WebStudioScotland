@@ -1,48 +1,26 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
-import Page1 from '../screens/Page1';
-import Page2 from '../screens/Page2';
-
-
-//My snacks are at: https://expo.io/snacks/@uni
-
-
-export default class Main extends React.Component {
+import CompanyOverview from '../screens/Roof/CompanyOverview';
+import RoofingInstallation from '../screens/Roof/RoofingInstallation';
+import S from '../constants/styles';
+export default class Sales extends React.Component {
   state = {
     page: 1,
+    leads: this.props.response,
   };
-
   pickPageToRender = () => {
     if (this.state.page === 1){
-      return (<Page1 pageChange={(pageNum) => this.setState({page: pageNum})} />);
+      return (<CompanyOverview pageChange={(pageNum) => this.setState({page: pageNum})} leads={this.state.leads}/>);
     }
     if (this.state.page === 2) {
-      return (<Page2 pageChange={(pageNum) => this.setState({page: pageNum})} />);
+      return (<RoofingInstallation pageChange={(pageNum) => this.setState({page: pageNum})} leads={this.state.leads} />);
     }
   }
-
   render() {
     return (
-      <View style={styles.container}>
+      <View style={S.container}>
         {this.pickPageToRender()}
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#ecf0f1',
-    padding: 8,
-  },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});

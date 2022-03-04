@@ -1,62 +1,40 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
+// IMPORT CONSTANTS
 import Constants from 'expo-constants';
+import S from '../constants/styles';
+// IMPORT PAGES
 import Home from '../screens/Home';
-import Page2 from '../screens/Page2';
-// import Settings from '../screens/Settings';
-import Sales from './Sales';
-// import CompanyOverview from '../screens/CompanyOverview/CompanyOverview';
-
-
-//My snacks are at: https://expo.io/snacks/@uni
-
-
+import Leads from '../screens/Leads';
+import Settings from '../screens/Settings';
+import Roof from './Roof';
 export default class Main extends React.Component {
   state = {
     page: 1,
-    leads: {},
+    lead: {},
   };
 
   pickPageToRender = () => {
     if (this.state.page === 1){
-      console.log(this.state.userInfo)
+      // console.log(this.state.userInfo)
       return (<Home pageChange={(pageNum) => this.setState({page: pageNum})} response={this.props.response} />);
     }
     if (this.state.page === 2) {
-      return (<Page2 pageChange={(pageNum) => this.setState({page: pageNum})} leads={(leads) => this.setState({leads: leads})} response={this.props.response} />);
+      return (<Leads pageChange={(pageNum) => this.setState({page: pageNum})} lead={(lead) => this.setState({lead: lead})} response={this.props.response} />);
     }
     if (this.state.page === 3) {
       return (<Settings pageChange={(pageNum) => this.setState({page: pageNum})} response={this.props.response} />);
     }
     if (this.state.page === 4) {
-      return (<Sales pageChange={(pageNum) => this.setState({page: pageNum})} leads={(leads) => this.setState({leads: leads})} response={this.props.response} />);
+      return (<Roof pageChange={(pageNum) => this.setState({page: pageNum})} lead={this.state.lead} />);
     }
   }
-
   render() {
     return (
-      <View style={styles.container}>
+      <View style={[S.container, {paddingTop: Constants.statusBarHeight}]}>
         {this.pickPageToRender()}
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#0C002E',
-    padding: 0,
-    margin: 0,
-  },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});

@@ -17,6 +17,16 @@ export default {
         marginRight: 'auto',
         marginBottom: 20,
     },
+    imageFullWidth: {
+        maxWidth: "100%",
+        // maxHeight: 420,
+        // padding: 10,
+        // flex: 1,
+        resizeMode: "contain",
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        // marginBottom: 20,
+    },
     logoBG: {
         width: 260,
         height: 200,
@@ -35,8 +45,10 @@ export default {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: C.lomondBlue,
+
     },
     headerBar:{
+        paddingTop: 17, 
         paddingBottom: 20, 
         width: '100%',
         backgroundColor: C.dark,

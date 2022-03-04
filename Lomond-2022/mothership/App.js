@@ -42,9 +42,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#ecf0f1',
-    padding: 8,
+    // paddingTop: Constants.statusBarHeight,
+    // backgroundColor: '#ecf0f1',
+    // padding: 8,
   },
   paragraph: {
     margin: 24,

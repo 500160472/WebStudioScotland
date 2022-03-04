@@ -13,9 +13,9 @@ APP [####Main][DONE]
                   - Choose Product
                     - Roofing [####Main] [DONE] 
                       - Company OverView [DONE] 
-                        - Company Overview  [ALMOST-DONE]- certification images
+                        -  Company Overview  [DONE] [!FUNCTIONAL COMPONENT] 
                             COMPONENTS = (header image, footer, text, video, buttons)
-                        - Product OverView [ALMOST-DONE]- missing gallery only
+                        -  Product OverView [ALMOST-DONE]- missing gallery only [!CLASS COMPONENT]
                         - Installation
                         - Typical Weaknesses
                         - Product Guarantee
