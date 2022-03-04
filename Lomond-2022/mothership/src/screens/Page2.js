@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
-
+import S from '../constants/styles';
+import C from '../constants/colours';
 // on page load fetch results from url and pass to page
 // onComponentMount = () => {
 //   // isLoading: true,
@@ -42,7 +43,7 @@ function leads(repName) {
     .then((Response)=>{
           
       
-      alert(Response[0].id)
+      // alert(Response[0].id)
       // alert(Response[0].Message)
       // if (Response[0].Message == "Success") {
         // console.log(Response[0].FullName)

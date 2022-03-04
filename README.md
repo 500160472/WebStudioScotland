@@ -4,17 +4,18 @@ This is the main app folder frr Lomond Improvements
 
 The app structure is as follows
 
-APP [####Main]
+APP [####Main][DONE] 
     -Login [DONE]
-    -LoggedIn
-        -Homepage [####Main]
+    -LoggedIn[DONE] 
+        -Homepage [####Main] [DONE] 
             -Leads
-                - FetchLeads
+                - FetchLeads [DONE] 
                   - Choose Product
-                    - Roofing [####Main]
-                      - Company OverView
-                        - Company Overview
-                        - Product OverView
+                    - Roofing [####Main] [DONE] 
+                      - Company OverView [DONE] 
+                        - Company Overview  [ALMOST-DONE]- certification images
+                            COMPONENTS = (header image, footer, text, video, buttons)
+                        - Product OverView [ALMOST-DONE]- missing gallery only
                         - Installation
                         - Typical Weaknesses
                         - Product Guarantee

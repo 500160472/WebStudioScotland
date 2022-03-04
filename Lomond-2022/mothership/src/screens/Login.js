@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Text, View, KeyboardAvoidingView, StyleSheet, TouchableOpacity, TextInput} from 'react-native';
 import Constants from 'expo-constants';
 import S from '../constants/styles';
+import C from '../constants/colours';
 
 
 // create a function for when login button is pressed that connects to mysql database to check if username and password are correct. if correct, then go to main page. if incorrect, then stay on login page
@@ -62,7 +63,7 @@ export default class Login extends React.Component {
 
     return (
       <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.keyboard}
+      behavior={Platform.OS === "ios" ? "padding" : "height"} style={S.flexDark}
     >
       <View style={styles.container}>
         <Text style={styles.header}> </Text>
@@ -93,10 +94,7 @@ export default class Login extends React.Component {
 
 const styles = StyleSheet.create({
   
-  keyboard: {
-    backgroundColor: S.colors.lomondBlue,
-    flex: 1,
-},
+
   container: {
     width: '100%',
     height: '100%',
@@ -107,13 +105,13 @@ const styles = StyleSheet.create({
   },
   loginText: {
     fontSize: 30,
-    color: S.colors.lomondBlue,
+    color: C.lomondBlue,
     textAlign: 'center',
     marginBottom: 20,
   },
 
   header: {
-    backgroundColor: S.colors.dark,
+    backgroundColor: C.dark,
     width: '100%',
     textAlign: 'center',
     padding: 16,
@@ -129,14 +127,14 @@ const styles = StyleSheet.create({
     width: '60%',
     padding: 26,
     marginTop: 32,
-    backgroundColor: S.colors.white,
+    backgroundColor: C.white,
     borderRadius: 8,
   },
   input: {
     width: '100%',
     // height: 40,
     fontSize: 16,
-    borderColor:  S.colors.lightBlue,
+    borderColor:  C.lightBlue,
     borderWidth: 1,
     borderRadius: 8,
     padding: 12,
@@ -144,7 +142,7 @@ const styles = StyleSheet.create({
   },
   button: {
     width: '100%',
-    backgroundColor:  S.colors.lightBlue,
+    backgroundColor:  C.lightBlue,
     padding: 12,
     borderRadius: 8,
     marginTop: 16,
