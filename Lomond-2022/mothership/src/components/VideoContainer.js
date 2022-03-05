@@ -11,7 +11,7 @@ export default function VideoContainer(props){
     const [status, setStatus] = React.useState({});
     // [, {width: width, height: height}]]
     return (
-        <View style={S.boxedContainerHighlight}>
+    <View style={S.boxedContainerHighlight}>
       <Video source={{uri: props.url}}
         rate={1.0}
         volume={1.0}

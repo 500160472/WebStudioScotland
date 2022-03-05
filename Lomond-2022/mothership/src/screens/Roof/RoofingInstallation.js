@@ -15,6 +15,7 @@ import BeforeAfter from '../../assets/images/before-after.jpeg';
 
     return (
         <SafeAreaView>
+        
             <View style={S.container}>
               <View style={S.headerBar}>
                 <Text style={S.headerText}>COMPANY OVERVIEW</Text>
@@ -34,6 +35,7 @@ import BeforeAfter from '../../assets/images/before-after.jpeg';
           </ScrollView>
               </View>
               {/* FOOTER  */}
+              {/* Last Page, Last page number - Current Page, Current Page Number - Next Page, Next Page number */}
               <View style={S.footerContainerLight}>
                 <TouchableOpacity onPress={()=> this.props.pageChange(1)} style={S.flexThird}>
                 <Text style={S.boldSubTitle}>
