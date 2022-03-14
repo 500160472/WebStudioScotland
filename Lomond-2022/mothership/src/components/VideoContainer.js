@@ -18,8 +18,9 @@ export default function VideoContainer(props){
         isMuted={false}
         resizeMode="contain"
         style={S.video}
-        shouldPlay
+        // shouldPlay
         isLooping
+        ref={video}
         onPlaybackStatusUpdate={status => setStatus(() => status)}
       />
                     <TouchableOpacity  style={S.buttonDark} onPress={() =>

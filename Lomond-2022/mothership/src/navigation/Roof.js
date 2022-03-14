@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
+import S from '../constants/styles';
+// IMPORT PAGES FROM ROOFING SECTION
 import CompanyOverview from '../screens/Roof/CompanyOverview';
 import RoofingInstallation from '../screens/Roof/RoofingInstallation';
-import S from '../constants/styles';
+
 export default class Sales extends React.Component {
   state = {
     page: 1,
