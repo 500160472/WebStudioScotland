@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, Image, SafeAreaView, ScrollView, Button } from 'react-native';
 import { Video, AVPlaybackStatus } from 'expo-av';
+
 // THEME
 import S from '../constants/styles';
 import C from '../constants/colours';

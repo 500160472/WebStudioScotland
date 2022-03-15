@@ -26,16 +26,43 @@ export default function RoofingInstallation(props){
               </View>
               <View style={S.mainContainerLight}>
                 <ScrollView style={S.scroll}>
-                  <Image source={BeforeAfter} style={S.headerImage} />
-                  <Text style={S.subTitleDark}>
-                  There are thousands of Roofing Companys in Scotland. Unfortunatly, a high ever changing percentage of these are not even registered or have a qualified workforce.{"\n"}</Text>
-                  <Text style={S.boldSubTitleDark}>As a properly regulated business, we are only allowed to install industry leading products, fitted by our fully qualified tradesmen.
+                <Text style={S.title}>Roofing Problems</Text>
 
-                  Every roofing project we undertake at lomond EXCEEDS building standard's requirments (BS:5534) which is the minimum British Standard for Roofing Installations
-                  </Text>
+<View style={S.flexRow}>
+  <View style={{ flex: 1 }}>
+      <Text style={S.secondTitle}>Exterior</Text>
+        <Text style={S.list}>
+    - Porus, Slipped or Brital Tiles{"\n"}
+    - Fungal Growth{"\n"}
+    - Degraded Jointing{"\n"}
+    - Broken Flashing
+        </Text> 
+  </View>
+
+  <View style={{ flex: 1 }}>
+      <Text style={S.secondTitle}>Internal</Text>
+        <Text style={S.list}>
+    - Porus, Slipped or Brital Tiles{"\n"}
+    - Fungal Growth{"\n"}
+    - Degraded Jointing{"\n"}
+    - Broken Flashing
+        </Text> 
+  </View>
+
+  <View style={{ flex: 1 }}>
+      <Text style={S.secondTitle}>Hidden Dangers
+</Text>
+        <Text style={S.list}>
+    - Porus, Slipped or Brital Tiles{"\n"}
+    - Fungal Growth{"\n"}
+    - Degraded Jointing{"\n"}
+    - Broken Flashing
+        </Text> 
+  </View>
+</View>       
                 </ScrollView>
               </View>
-              <Footer previousPage={T.PAGES.ROOFING[1]} currentPage={T.PAGES.ROOFING[2]} nextPage={T.PAGES.ROOFING[3]} pageChange={(pageNum) => props.pageChange(pageNum)} />
+              <Footer previousPage={T.PAGES.ROOFING[1]} currentPage={T.PAGES.ROOFING[2]} nextPage={T.PAGES.ROOFING[1]} pageChange={(pageNum) => props.pageChange(pageNum)} />
             </View>
         </SafeAreaView>
           );

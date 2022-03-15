@@ -4,6 +4,18 @@ export default {
   scroll: {
     
   },
+  listItem: {
+    borderRadius: 12,
+    backgroundColor: C.white,
+    padding: 20,
+    flexDirection: "row",
+    // justifyContent: "space-between",
+    alignItems: "center",
+    flex: 1,
+    marginBottom: 10,
+    minWidth: "80%",
+  },
+
 // VIEW CONTAINERS
     container: {
         margin: 0, 

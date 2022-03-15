@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, Image, SafeAreaView, ScrollView, Button } from 'react-native';
-import { Video, AVPlaybackStatus } from 'expo-av';
 // THEME
 import S from '../../constants/styles';
 import C from '../../constants/colours';
@@ -17,7 +16,7 @@ import VideoContainer from '../../components/VideoContainer';
 import Footer from '../../components/Footer';
 
 export default function CompanyOverview(props){
-  // const [status, setStatus] = React.useState({});
+  const [status, setStatus] = React.useState({});
     return (
   <SafeAreaView>
       <View style={S.container}>
@@ -28,7 +27,8 @@ export default function CompanyOverview(props){
 
         <View style={S.mainContainerLight}>
           <ScrollView>
-            
+           <Text>{props.lead.id}</Text> 
+           <Text>{props.lead.name_value_list.rep_name_c.value}</Text> 
             <Image source={O.ROOFING.IMAGES.HEADER} style={S.headerImage} />
             <Image source={O.ROOFING.IMAGES.ACCREDITATIONS} style={S.imageFullWidth} />
             

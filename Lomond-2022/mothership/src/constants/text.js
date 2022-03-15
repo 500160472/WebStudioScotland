@@ -31,6 +31,10 @@ module.exports = {
                 PAGE_NUMBER : '2',
                 TITLE : 'Roofing Installation',
             },
+            {
+                PAGE_NUMBER : '3',
+                TITLE : 'Roofing Problems',
+            },
         ],
     },
 }
