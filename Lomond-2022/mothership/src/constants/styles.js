@@ -1,41 +1,9 @@
 // import Constants from 'expo-constants';
 import C from "./colours";
 export default {
-    logo: {
-        width: 260,
-        height: 120,
-        padding: 10,
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        marginBottom: 20,
-    },
-    headerImage: {
-        width: "100%",
-        maxHeight: 420,
-        // padding: 10,
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        marginBottom: 20,
-    },
-    imageFullWidth: {
-        maxWidth: "100%",
-        // maxHeight: 420,
-        // padding: 10,
-        // flex: 1,
-        resizeMode: "contain",
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        // marginBottom: 20,
-    },
-    logoBG: {
-        width: 260,
-        height: 200,
-        padding: 10,
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        marginBottom: 20,
-        borderRadius: 26,
-    },
+  scroll: {
+    
+  },
 // VIEW CONTAINERS
     container: {
         margin: 0, 
@@ -92,7 +60,6 @@ export default {
         maxHeight: 580, 
         marginBottom: 0,
         paddingBottom: 0,
-        // flexDirection: 'row',
         justifyContent: 'space-between',
         backgroundColor: C.white,
         borderRadius: 8,
@@ -108,10 +75,8 @@ export default {
         width: '80%',
         padding: 26,
         flexDirection: 'row',
-        // justifyContent: 'space-between',
         backgroundColor: C.lightBlue,
         borderRadius: 8,
-        // flex: 3,
     },
     flexThird: {
         flex: 1,
@@ -198,7 +163,36 @@ export default {
     video: {
         width: '100%',
         height: '100%',
-    }
-
+    },
+    logo: {
+      width: 260,
+      height: 120,
+      padding: 10,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      marginBottom: 20,
+  },
+  headerImage: {
+      width: "100%",
+      maxHeight: 420,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      marginBottom: 20,
+  },
+  imageFullWidth: {
+      maxWidth: "100%",
+      resizeMode: "contain",
+      marginLeft: 'auto',
+      marginRight: 'auto',
+  },
+  logoBG: {
+      width: 260,
+      height: 200,
+      padding: 10,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      marginBottom: 20,
+      borderRadius: 26,
+  },
 };
 

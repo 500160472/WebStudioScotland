@@ -9,23 +9,26 @@ import T from '../constants/text';
 
 export default function Footer(props){
 
-    const previousPage = props.previousPage ? <Text style={S.boldSubTitle}>{T.GO_TO} {props.previousPage}</Text> : null;
-    const nextPage = props.nextPage ? <Text style={S.boldSubTitle}>{T.GO_TO} {props.nextPage.TITLE}</Text> : null;
+    const previousPage = props.previousPage ? <TouchableOpacity onPress={()=> props.pageChange(parseInt(props.previousPage.PAGE_NUMBER))}  style={S.flexThird}><Text style={S.boldSubTitle}>{T.GO_TO} {props.previousPage.TITLE}</Text></TouchableOpacity> : <View style={S.flexThird}></View>;
+
+    const nextPage = props.nextPage ? <TouchableOpacity onPress={()=> props.pageChange(parseInt(props.nextPage.PAGE_NUMBER))}  style={S.flexThird}><Text style={S.boldSubTitle}>{T.GO_TO} {props.nextPage.TITLE}</Text></TouchableOpacity> : null;
+    
     return (
         <View style={S.footerContainerLight}>
             {/* LEFT SIDE BUTTON = PREVIOUS PAGE IF NOT NULL */}
-            <TouchableOpacity onPress={()=> props.pageChange(parseInt(props.previousPage.PAGE_NUMBER))}  style={S.flexThird}>
+            
                 {previousPage}
-            </TouchableOpacity>
+            
             {/* CENTER TEXT = CURRENT PAGE */}
-            <Text style={[S.subTitle, S.flexThird]}>
-                {props.currentPage.TITLE}
-            </Text>
-            {/* RIGHT SIDE BUTTON */}
-            <TouchableOpacity onPress={()=> props.pageChange(parseInt(props.nextPage.PAGE_NUMBER))}  style={S.flexThird}>
+            
+                <Text style={[S.subTitle, S.flexThird]}>
+                    {props.currentPage.TITLE}
+                </Text>
+            
+            {/* RIGHT SIDE BUTTON NEXT PAGE IF NOT NULL */}
+              
                 {nextPage}
-            </TouchableOpacity>
-
+            
         </View>
 );
 }   

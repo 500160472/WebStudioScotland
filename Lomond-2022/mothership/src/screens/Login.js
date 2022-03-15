@@ -14,7 +14,7 @@ import C from '../constants/colours';
     if ((Username.length==0) || (Password.length==0)){
       alert("Required Field Is Missing!!!");
     }else{
-      var APIURL = "https://lomondcrm.co.uk/react/signin.php";
+      var APIURL = "https://justcors.com/tl_79c52e0/https://lomondcrm.co.uk/react/signin.php";
 
       var headers = {
         'Accept' : 'application/json',
@@ -34,12 +34,15 @@ import C from '../constants/colours';
       .then((Response)=>Response.json())
       .then((Response)=>{
         // alert(Response)
-        alert(Response[0].Message)
+        
         if (Response[0].Message == "Success") {
           // console.log(Response[0].FullName)
           props.response(Response);
           props.authenticated(true);
           props.userInfo(Data);
+        }
+        else{
+          alert(Response[0].Message)
         }
         // console.log(Data);
       })
@@ -62,31 +65,28 @@ export default class Login extends React.Component {
   render() {
 
     return (
-      <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : "height"} style={S.flexDark}
-    >
-      <View style={styles.container}>
-        <Text style={styles.header}> </Text>
-        <View style={styles.inputContainer}>
-          <Text style={styles.loginText}>LOGIN</Text>
-          <TextInput style={styles.input}
-            placeholder="Username"
-            onChangeText={(text) => this.setState({username: text})}
-            value={this.state.Username}
-          />
-          <TextInput style={styles.input}
-            placeholder="Password"
-            onChangeText={(text) => this.setState({password: text})}
-            value={this.state.password}
-          />
-        <TouchableOpacity style={styles.button} onPress={() => {login(this.state.username, this.state.password, this.props)}}>
-          <Text style={{textAlign: 'center'}}>
-            Submit
-          </Text>
-        </TouchableOpacity>
+      <KeyboardAvoidingView behavior={"padding"} style={S.flexDark}>
+        <View style={styles.container}>
+          <Text style={styles.header}> </Text>
+          <View style={styles.inputContainer}>
+            <Text style={styles.loginText}>LOGIN</Text>
+            <TextInput style={styles.input}
+              placeholder="Username"
+              onChangeText={(text) => this.setState({username: text})}
+              value={this.state.Username}
+            />
+            <TextInput style={styles.input}
+              placeholder="Password"
+              onChangeText={(text) => this.setState({password: text})}
+              value={this.state.password}
+            />
+          <TouchableOpacity style={styles.button} onPress={() => {login(this.state.username, this.state.password, this.props)}}>
+            <Text style={{textAlign: 'center'}}>
+              Submit
+            </Text>
+          </TouchableOpacity>
+          </View>
         </View>
-
-      </View>
       </KeyboardAvoidingView>
     );
   }

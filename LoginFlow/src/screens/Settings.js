@@ -1,7 +1,12 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
+
 import S from '../constants/styles';
+import C from '../constants/colours';
+import O from '../constants/objects';
+import T from '../constants/text';
+
 export default class Settings extends React.Component {
 //pageChange prop from App.js
   render() {
@@ -36,7 +41,7 @@ const styles = StyleSheet.create({
   page: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: S.colors.lightBlue,
+    backgroundColor: C.lightBlue,
   },
   container: {
     margin: 0, 
