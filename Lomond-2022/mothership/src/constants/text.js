@@ -7,7 +7,7 @@ module.exports = {
     GO_TO: 'Go to ',
     HEADERS: [
         { 
-            TITLE: 'LOMOND IMPROVEMENTS'
+        TITLE: 'LOMOND IMPROVEMENTS'
         },
         { 
         TITLE: 'COMPANY OVERVIEW'
@@ -16,25 +16,4 @@ module.exports = {
         TITLE: 'REASON FOR CHANGE'
         },
     ],
-    PAGES : {
-        ROOFING: [
-            {
-                PAGE_NUMBER : '',
-                TITLE : '',
-
-            },
-            {
-                PAGE_NUMBER : '1',
-                TITLE : 'Company Overview',
-            },
-            {
-                PAGE_NUMBER : '2',
-                TITLE : 'Roofing Installation',
-            },
-            {
-                PAGE_NUMBER : '3',
-                TITLE : 'Roofing Problems',
-            },
-        ],
-    },
 }

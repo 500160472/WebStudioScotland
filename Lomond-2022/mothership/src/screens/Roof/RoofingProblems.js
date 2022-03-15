@@ -5,6 +5,7 @@ import S from '../../constants/styles';
 import C from '../../constants/colours';
 import O from '../../constants/objects';
 import T from '../../constants/text';
+import N from '../../constants/navigation';
 
 import BeforeAfter from '../../assets/images/before-after.jpeg';
 import Footer from '../../components/Footer';
@@ -18,53 +19,126 @@ export default function RoofingInstallation(props){
         // window.google.maps.event.addListener(streetView, 'zoomChanged', this.handlePovChanged())
 
     return (
-        <SafeAreaView>
-        
-            <View style={S.container}>
-              <View style={S.headerBar}>
-                <Text style={S.headerText}>{T.HEADERS[1].TITLE}</Text>
-              </View>
-              <View style={S.mainContainerLight}>
-                <ScrollView style={S.scroll}>
-                <Text style={S.title}>Roofing Problems</Text>
+
+      <SafeAreaView style={{width: "100%"}}>
+      <View style={S.container}>
+        <View style={S.headerBar}>
+          <Text style={S.headerText}>{T.HEADERS[1].TITLE}</Text>
+        </View>
+
+
+        <View style={S.mainContainerLight}>
+          <ScrollView>
+           {/* <Text>{props.lead.id}</Text>  */}
+           {/* <Text>{props.lead.name_value_list.rep_name_c.value}</Text>  */}
+            <Image source={O.ROOFING.IMAGES.HEADER} style={S.headerImage} />
+            {/* <Image source={O.ROOFING.IMAGES.ACCREDITATIONS} style={S.imageFullWidth} /> */}
+            
+            <Text style={S.boldTitleDark}>
+            </Text>
+            
+            <Text style={S.subTitleDark}>
+            </Text>
+  
+          
 
 <View style={S.flexRow}>
-  <View style={{ flex: 1 }}>
-      <Text style={S.secondTitle}>Exterior</Text>
-        <Text style={S.list}>
-    - Porus, Slipped or Brital Tiles{"\n"}
-    - Fungal Growth{"\n"}
-    - Degraded Jointing{"\n"}
-    - Broken Flashing
-        </Text> 
-  </View>
+   <View style={{ flex: 1 }}>
+       <Text style={S.boldTitleDark}>Exterior</Text>
+         <Text style={S.subTitleDarkNoAlign}>
+     - Porus, Slipped or Brital Tiles{"\n"}
+     - Fungal Growth{"\n"}
+     - Degraded Jointing{"\n"}
+     - Broken Flashing
+         </Text> 
+   </View>
 
-  <View style={{ flex: 1 }}>
-      <Text style={S.secondTitle}>Internal</Text>
-        <Text style={S.list}>
-    - Porus, Slipped or Brital Tiles{"\n"}
-    - Fungal Growth{"\n"}
-    - Degraded Jointing{"\n"}
-    - Broken Flashing
+   <View style={{ flex: 1 }}>
+       <Text style={S.boldTitleDark}>Internal</Text>
+         <Text style={S.subTitleDarkNoAlign}>
+     - Porus, Slipped or Brital Tiles{"\n"}
+     - Fungal Growth{"\n"}
+     - Degraded Jointing{"\n"}
+     - Broken Flashing
         </Text> 
-  </View>
+   </View>
 
-  <View style={{ flex: 1 }}>
-      <Text style={S.secondTitle}>Hidden Dangers
-</Text>
-        <Text style={S.list}>
-    - Porus, Slipped or Brital Tiles{"\n"}
-    - Fungal Growth{"\n"}
-    - Degraded Jointing{"\n"}
-    - Broken Flashing
-        </Text> 
-  </View>
-</View>       
-                </ScrollView>
-              </View>
-              <Footer previousPage={T.PAGES.ROOFING[1]} currentPage={T.PAGES.ROOFING[2]} nextPage={T.PAGES.ROOFING[1]} pageChange={(pageNum) => props.pageChange(pageNum)} />
-            </View>
-        </SafeAreaView>
+   <View style={{ flex: 1 }}>
+       <Text style={S.boldTitleDark}>Hidden Dangers</Text>
+         <Text style={S.subTitleDarkNoAlign}>
+     - Porus, Slipped or Brital Tiles{"\n"}
+     - Fungal Growth{"\n"}
+     - Degraded Jointing{"\n"}
+     - Broken Flashing
+         </Text> 
+   </View>
+ </View>       
+
+
+
+
+          
+          </ScrollView>
+        </View>
+
+        <Footer previousPage={N.ROOFING[2]} currentPage={N.ROOFING[3]} nextPage={N.ROOFING[4]} pageChange={(pageNum) => props.pageChange(pageNum)} />
+
+
+      </View>
+  </SafeAreaView>
+
+
+
+
+
+
+//         <SafeAreaView>
+        
+//             <View style={S.container}>
+//               <View style={S.headerBar}>
+//                 <Text style={S.headerText}>{T.HEADERS[1].TITLE}</Text>
+//               </View>
+//               <View style={S.mainContainerLight}>
+//                 <ScrollView style={S.scroll}>
+//                 <Text style={S.title}>Roofing Problems</Text>
+
+// <View style={S.flexRow}>
+//   <View style={{ flex: 1 }}>
+//       <Text style={S.secondTitle}>Exterior</Text>
+//         <Text style={S.list}>
+//     - Porus, Slipped or Brital Tiles{"\n"}
+//     - Fungal Growth{"\n"}
+//     - Degraded Jointing{"\n"}
+//     - Broken Flashing
+//         </Text> 
+//   </View>
+
+//   <View style={{ flex: 1 }}>
+//       <Text style={S.secondTitle}>Internal</Text>
+//         <Text style={S.list}>
+//     - Porus, Slipped or Brital Tiles{"\n"}
+//     - Fungal Growth{"\n"}
+//     - Degraded Jointing{"\n"}
+//     - Broken Flashing
+//         </Text> 
+//   </View>
+
+//   <View style={{ flex: 1 }}>
+//       <Text style={S.secondTitle}>Hidden Dangers
+// </Text>
+//         <Text style={S.list}>
+//     - Porus, Slipped or Brital Tiles{"\n"}
+//     - Fungal Growth{"\n"}
+//     - Degraded Jointing{"\n"}
+//     - Broken Flashing
+//         </Text> 
+//   </View>
+// </View>       
+//                 </ScrollView>
+//               </View>
+//               <Footer previousPage={T.PAGES.ROOFING[2]} currentPage={T.PAGES.ROOFING[3]} nextPage={T.PAGES.ROOFING[1]} pageChange={(pageNum) => props.pageChange(pageNum)} />
+//             </View>
+//         </SafeAreaView>
           );
         }
 const styles = StyleSheet.create({

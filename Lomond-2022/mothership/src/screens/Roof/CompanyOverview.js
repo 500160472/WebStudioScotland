@@ -5,9 +5,9 @@ import S from '../../constants/styles';
 import C from '../../constants/colours';
 import O from '../../constants/objects';
 import T from '../../constants/text';
+import N from '../../constants/navigation';
 // import L from '../../constants/links';
 // import A from '../../constants/accessibility';
-// import N from '../../constants/necessities';
 // import D from '../../constants/directions';
 // ASSETS
 
@@ -21,7 +21,7 @@ export default function CompanyOverview(props){
   <SafeAreaView>
       <View style={S.container}>
         <View style={S.headerBar}>
-          <Text style={S.headerText}>{T.HEADERS[1].TITLE}</Text>
+          <TouchableOpacity onPress={()=>{props.home(1)}}><Text style={S.headerText}>{T.HEADERS[1].TITLE}</Text></TouchableOpacity>
         </View>
 
 
@@ -42,7 +42,7 @@ export default function CompanyOverview(props){
           </ScrollView>
         </View>
 
-        <Footer currentPage={T.PAGES.ROOFING[1]} nextPage={T.PAGES.ROOFING[2]} pageChange={(pageNum) => props.pageChange(pageNum)} />
+        <Footer currentPage={N.ROOFING[1]} nextPage={N.ROOFING[2]} pageChange={(pageNum) => props.pageChange(pageNum)} />
 
 
       </View>

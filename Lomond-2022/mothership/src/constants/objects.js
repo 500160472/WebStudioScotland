@@ -8,6 +8,7 @@ const images = {
             HEADER: require('../assets/images/header.png'),
             BEFORE_AFTER: require('../assets/images/before-after.jpeg'),
             ACCREDITATIONS: require('../assets/images/accreditations.png'),
+            PRODUCT_GUARANTEE: require('../assets/images/guarantees.png'),
         },
         VIDEOS:{
             // COMPANY_OVERVIEW: require('../assets/videos/company-overview.mp4'),

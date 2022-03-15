@@ -19,6 +19,7 @@ export default function VideoContainer(props){
         isMuted={false}
         resizeMode="contain"
         style={S.video}
+        useNativeControls
         // shouldPlay
         isLooping
         ref={video}

@@ -6,13 +6,14 @@ import S from '../constants/styles';
 import C from '../constants/colours';
 import O from '../constants/objects';
 import T from '../constants/text';
+import L from '../constants/links';
 
 
   export default function Leads(props){
     const [isLoading, setLoading] = React.useState(true);
     const [data, setData] = React.useState([]);
     
-    var APIURL = "https://lomondcrm.co.uk/react/suite.php";
+    var APIURL = L.CRM_URL;
     var headers = {
       'Accept' : 'application/json',
       'Content-Type' : 'application/json'
