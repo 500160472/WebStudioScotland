@@ -3,9 +3,14 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, Button } from 'react-native';
 
-import S from '../constants/styles';
-import C from '../constants/colours';
-import T from '../constants/text';
+import S from '../constants/c1--Styles';
+import C from '../constants/c2--Colours';
+import O from '../constants/c3--Objects';
+import T from '../constants/c4--Text';
+import L from '../constants/c5--Links';
+import A from '../constants/c6--Actions';
+import N from '../constants/c7--Navigation';
+import D from '../constants/c8--Data';
 
 export default function Footer(props){
 

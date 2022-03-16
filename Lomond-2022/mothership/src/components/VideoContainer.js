@@ -4,8 +4,14 @@ import { Text, View, StyleSheet, TouchableOpacity, Image, SafeAreaView, ScrollVi
 import { Video, AVPlaybackStatus } from 'expo-av';
 
 // THEME
-import S from '../constants/styles';
-import C from '../constants/colours';
+import S from '../constants/c1--Styles';
+import C from '../constants/c2--Colours';
+import O from '../constants/c3--Objects';
+import T from '../constants/c4--Text';
+import L from '../constants/c5--Links';
+import A from '../constants/c6--Actions';
+import N from '../constants/c7--Navigation';
+import D from '../constants/c8--Data';
 // create a functional component called VideoContainer that will be used in the Roof component.
 export default function VideoContainer(props){
     const video = React.useRef(null);
@@ -19,6 +25,7 @@ export default function VideoContainer(props){
         isMuted={false}
         resizeMode="contain"
         style={S.video}
+        useNativeControls
         // shouldPlay
         isLooping
         ref={video}

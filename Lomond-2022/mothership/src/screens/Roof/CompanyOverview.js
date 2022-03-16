@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, Image, SafeAreaView, ScrollView, Button } from 'react-native';
 // THEME
-import S from '../../constants/styles';
-import C from '../../constants/colours';
-import O from '../../constants/objects';
-import T from '../../constants/text';
-// import L from '../../constants/links';
-// import A from '../../constants/accessibility';
-// import N from '../../constants/necessities';
-// import D from '../../constants/directions';
+import S from '../../constants/c1--Styles';
+import C from '../../constants/c2--Colours';
+import O from '../../constants/c3--Objects';
+import T from '../../constants/c4--Text';
+import L from '../../constants/c5--Links';
+import A from '../../constants/c6--Actions';
+import N from '../../constants/c7--Navigation';
+import D from '../../constants/c8--Data';
 // ASSETS
 
 // COMPONENTS
@@ -21,7 +21,7 @@ export default function CompanyOverview(props){
   <SafeAreaView>
       <View style={S.container}>
         <View style={S.headerBar}>
-          <Text style={S.headerText}>{T.HEADERS[1].TITLE}</Text>
+          <TouchableOpacity onPress={()=>{props.home(1)}}><Text style={S.headerText}>{T.HEADERS[1].TITLE}</Text></TouchableOpacity>
         </View>
 
 
@@ -42,7 +42,7 @@ export default function CompanyOverview(props){
           </ScrollView>
         </View>
 
-        <Footer currentPage={T.PAGES.ROOFING[1]} nextPage={T.PAGES.ROOFING[2]} pageChange={(pageNum) => props.pageChange(pageNum)} />
+        <Footer currentPage={N.ROOFING[1]} nextPage={N.ROOFING[2]} pageChange={(pageNum) => props.pageChange(pageNum)} />
 
 
       </View>

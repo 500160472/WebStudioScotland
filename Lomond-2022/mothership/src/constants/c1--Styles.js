@@ -1,8 +1,10 @@
 // import Constants from 'expo-constants';
-import C from "./colours";
+import C from "./c2--Colours";
 export default {
   scroll: {
-    
+    width: "100%",
+    flex: 1,
+    marginBottom: 20,
   },
   listItem: {
     borderRadius: 12,
@@ -14,6 +16,10 @@ export default {
     flex: 1,
     marginBottom: 10,
     minWidth: "80%",
+  },
+  flexRow:{
+    flex: 1,
+    flexDirection: 'row',
   },
 
 // VIEW CONTAINERS
@@ -139,6 +145,12 @@ export default {
         color: C.lomondBlue,
         fontSize: 20,
         textAlign: 'center',
+        fontWeight: '300',
+      },
+      subTitleDarkNoAlign:{
+        color: C.lomondBlue,
+        fontSize: 20,
+        textAlign: 'left',
         fontWeight: '300',
       },
     boldSubTitleDark:{

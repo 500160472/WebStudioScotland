@@ -1,8 +1,14 @@
 import * as React from 'react';
 import { Text, View, KeyboardAvoidingView, StyleSheet, TouchableOpacity, TextInput} from 'react-native';
 import Constants from 'expo-constants';
-import S from '../constants/styles';
-import C from '../constants/colours';
+import S from '../constants/c1--Styles';
+import C from '../constants/c2--Colours';
+import O from '../constants/c3--Objects';
+import T from '../constants/c4--Text';
+import L from '../constants/c5--Links';
+import A from '../constants/c6--Actions';
+import N from '../constants/c7--Navigation';
+import D from '../constants/c8--Data';
 
 
 // create a function for when login button is pressed that connects to mysql database to check if username and password are correct. if correct, then go to main page. if incorrect, then stay on login page
@@ -14,7 +20,7 @@ import C from '../constants/colours';
     if ((Username.length==0) || (Password.length==0)){
       alert("Required Field Is Missing!!!");
     }else{
-      var APIURL = "https://justcors.com/tl_79c52e0/https://lomondcrm.co.uk/react/signin.php";
+      var APIURL = L.LOGIN_URL;
 
       var headers = {
         'Accept' : 'application/json',

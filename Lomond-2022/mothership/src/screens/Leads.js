@@ -2,17 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import Constants from 'expo-constants';
 
-import S from '../constants/styles';
-import C from '../constants/colours';
-import O from '../constants/objects';
-import T from '../constants/text';
+import S from '../constants/c1--Styles';
+import C from '../constants/c2--Colours';
+import O from '../constants/c3--Objects';
+import T from '../constants/c4--Text';
+import L from '../constants/c5--Links';
+import A from '../constants/c6--Actions';
+import N from '../constants/c7--Navigation';
+import D from '../constants/c8--Data';
 
 
   export default function Leads(props){
     const [isLoading, setLoading] = React.useState(true);
     const [data, setData] = React.useState([]);
     
-    var APIURL = "https://lomondcrm.co.uk/react/suite.php";
+    var APIURL = L.CRM_URL;
     var headers = {
       'Accept' : 'application/json',
       'Content-Type' : 'application/json'
