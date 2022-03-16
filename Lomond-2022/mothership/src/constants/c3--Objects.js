@@ -9,10 +9,16 @@ const images = {
             BEFORE_AFTER: require('../assets/images/before-after.jpeg'),
             ACCREDITATIONS: require('../assets/images/accreditations.png'),
             PRODUCT_GUARANTEE: require('../assets/images/guarantees.png'),
+            ROOFING_ONE: require('../assets/images/roofing1.jpeg'),
+            ROOFING_TWO: require('../assets/images/roofing2.jpeg'),
+            ROOFING_THREE: require('../assets/images/roofing3.jpeg'),
+            ROOFING_PROBLEMS_ONE: require('../assets/images/roofing1.jpeg'),
+            ROOFING_PROBLEMS_TWO: require('../assets/images/roofing2.jpeg'),
+            ROOFING_PROBLEMS_THREE: require('../assets/images/roofing3.jpeg'),
         },
         VIDEOS:{
             // COMPANY_OVERVIEW: require('../assets/videos/company-overview.mp4'),
-            COMPANY_OVERVIEW: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
+            COMPANY_OVERVIEW: require('../assets/videos/intro.mp4'),
         }
     }
   };

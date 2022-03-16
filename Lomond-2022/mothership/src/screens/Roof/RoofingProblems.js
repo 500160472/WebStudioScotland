@@ -1,6 +1,8 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, Dimensions, Image, SafeAreaView, ScrollView } from 'react-native';
 import Constants from 'expo-constants';
+
+const BASE_PADDING = 10;
 
 import S from '../../constants/c1--Styles';
 import C from '../../constants/c2--Colours';
@@ -13,6 +15,7 @@ import D from '../../constants/c8--Data';
 
 import BeforeAfter from '../../assets/images/before-after.jpeg';
 import Footer from '../../components/Footer';
+import LightBox from '../../components/LightBox';
 
 export default function RoofingInstallation(props){
     //pageChange prop from App.js
@@ -81,6 +84,12 @@ export default function RoofingInstallation(props){
 
 
 
+ <View style={styles.row}>
+      <LightBox source={O.ROOFING.IMAGES.ROOFING_PROBLEMS_ONE} />
+      <LightBox source={O.ROOFING.IMAGES.ROOFING_PROBLEMS_TWO} />
+      <LightBox source={O.ROOFING.IMAGES.ROOFING_PROBLEMS_THREE} />
+</View>
+
           
           </ScrollView>
         </View>
@@ -146,5 +155,10 @@ export default function RoofingInstallation(props){
           );
         }
 const styles = StyleSheet.create({
-
+  row: {
+    flexDirection: 'row',
+    marginLeft: -BASE_PADDING,
+    marginRight: -BASE_PADDING,
+    width: "100%",
+  },
 });

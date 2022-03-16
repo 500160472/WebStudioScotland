@@ -18,7 +18,7 @@ export default {
     minWidth: "80%",
   },
   flexRow:{
-    flex: 1,
+    // flex: 1,
     flexDirection: 'row',
   },
 

@@ -10,13 +10,13 @@ import A from '../../constants/c6--Actions';
 import N from '../../constants/c7--Navigation';
 import D from '../../constants/c8--Data';
 // ASSETS
-
 // COMPONENTS
 import VideoContainer from '../../components/VideoContainer';
 import Footer from '../../components/Footer';
 
 export default function CompanyOverview(props){
   const [status, setStatus] = React.useState({});
+  // const CompanyOverview = O.ROOFING.VIDEOS.COMPANY_OVERVIEW;
     return (
   <SafeAreaView>
       <View style={S.container}>

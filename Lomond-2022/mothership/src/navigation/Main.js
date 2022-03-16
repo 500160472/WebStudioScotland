@@ -15,6 +15,7 @@ import Home from '../screens/Home';
 import Leads from '../screens/Leads';
 import Settings from '../screens/Settings';
 import Roof from './Roof';
+import Lightbox from '../screens/Roof/lightbox';
 export default class Main extends React.Component {
   state = {
     page: 1,
@@ -34,6 +35,9 @@ export default class Main extends React.Component {
     }
     if (this.state.page === 4) {
       return (<Roof pageChange={(pageNum) => this.setState({page: pageNum})} lead={this.state.lead} />);
+    }
+    if (this.state.page === 5) {
+      return (<Lightbox pageChange={(pageNum) => this.setState({page: pageNum})} lead={this.state.lead} />);
     }
   }
   render() {

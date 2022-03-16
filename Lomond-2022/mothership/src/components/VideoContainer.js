@@ -19,7 +19,7 @@ export default function VideoContainer(props){
     // [, {width: width, height: height}]]
     return (
     <View style={S.boxedContainerHighlight}>
-      <Video source={{uri: props.url}}
+      <Video source={props.url}
         rate={1.0}
         volume={1.0}
         isMuted={false}

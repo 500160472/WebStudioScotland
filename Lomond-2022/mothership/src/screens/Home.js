@@ -38,7 +38,7 @@ render() {
             LEADS
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={S.buttonLight} onPress={()=> this.props.pageChange(4)}>
+        <TouchableOpacity style={S.buttonLight} onPress={()=> this.props.pageChange(5)}>
           <Text style={S.buttonText}>
             DEALS
           </Text>
