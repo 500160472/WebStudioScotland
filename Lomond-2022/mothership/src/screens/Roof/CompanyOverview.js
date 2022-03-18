@@ -42,7 +42,7 @@ export default function CompanyOverview(props){
           </ScrollView>
         </View>
 
-        <Footer currentPage={N.ROOFING[1]} nextPage={N.ROOFING[2]} pageChange={(pageNum) => props.pageChange(pageNum)} />
+        <Footer currentPage={N.ROOFING[2]} nextPage={N.ROOFING[3]} pageChange={(pageNum) => props.pageChange(pageNum)} />
 
 
       </View>

@@ -198,12 +198,15 @@ export default {
   },
   headerImage: {
       width: "100%",
+      height: 420,
       maxHeight: 420,
       marginLeft: 'auto',
       marginRight: 'auto',
       marginBottom: 20,
   },
   imageFullWidth: {
+      height: 200,
+      width: "100%",
       maxWidth: "100%",
       resizeMode: "contain",
       marginLeft: 'auto',

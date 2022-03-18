@@ -29,6 +29,7 @@ export default class Sales extends React.Component {
     lead: this.props.lead,
     closeStatus1: false,
     closeStatus2: false,
+    closeStatus3: false,
     reasons: '',
     showhome: '',
     customer: '',
@@ -50,7 +51,7 @@ export default class Sales extends React.Component {
       return (<RoofingInstallation pageChange={(pageNum) => this.setState({page: pageNum})} lead={this.state.lead} />);
     }
     if (this.state.page === 5) {
-      return (<ProductGuarantee pageChange={(pageNum) => this.setState({page: pageNum})} lead={this.state.lead} />);
+      return (<ProductGuarantee pageChange={(pageNum) => this.setState({page: pageNum})} lead={this.state.lead}  setClose={() => this.setState({closeStatus3: !this.state.closeStatus3})} closeStatus={this.state.closeStatus3}/>);
     }
     if (this.state.page === 6) {
       return (<ReasonsForChange reasons={this.state.reasons} setReasons={(data) => this.setState({reasons: data})}  pageChange={(pageNum) => this.setState({page: pageNum})} lead={this.state.lead} setClose={() => this.setState({closeStatus1: !this.state.closeStatus1})} closeStatus={this.state.closeStatus1}/>);

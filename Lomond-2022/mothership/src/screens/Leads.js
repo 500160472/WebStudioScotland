@@ -11,9 +11,9 @@ import A from '../constants/c6--Actions';
 import N from '../constants/c7--Navigation';
 import D from '../constants/c8--Data';
 
+export default function Leads(props){
 
-  export default function Leads(props){
-    const [isLoading, setLoading] = React.useState(true);
+  const [isLoading, setLoading] = React.useState(true);
     const [data, setData] = React.useState([]);
     
     var APIURL = L.CRM_URL;
@@ -59,6 +59,21 @@ import D from '../constants/c8--Data';
     
       }, [])
 
+    
+let testData = [{
+    id: '1',
+    name_value_list: {
+      rep_name_c:{name: 'rep_name_c', value: 'Chris'}, 
+      name:{name: 'name', value: 'Name Test'}, 
+      phone_home:{name: 'phone_home', value: 'Name Test'}, 
+      primary_address_street:{name: 'primary_address_street', value: 'Address Test'}, 
+      primary_address_postalcode:{name: 'primary_address_postalcode', value: 'Post Code Test'}, 
+      appointmenttime_c:{name: 'appointmenttime_c', value: 'Appointment Time Test'}, 
+    },
+  }];
+
+
+
     return (
 
 
@@ -71,11 +86,30 @@ import D from '../constants/c8--Data';
           {/* <Text style={{ fontSize: 18, color: 'green', textAlign: 'center'}}>{data.title}</Text>
           <Text style={{ fontSize: 14, color: 'green', textAlign: 'center', paddingBottom: 10}}>Leads:</Text> */}
           <FlatList
+            data={testData}
+            keyExtractor={({ id }, index) => id}
+            renderItem={({ item }) => (
+              <View style={S.listItem}>
+              <TouchableOpacity onPress={() => {
+                props.lead(item); 
+                console.log(props.product)
+                console.log(props.product)
+              props.pageChange(props.product)}} >
+                <Text>{'ID: ' + item.id + '\n  Rep Name: ' + item.name_value_list.rep_name_c.value  + '\n  Name: ' + item.name_value_list.name.value  + '\n  Phone: ' + item.name_value_list.phone_home.value + '\n  Address: ' + item.name_value_list.primary_address_street.value + '\n  Post Code: ' + item.name_value_list.primary_address_postalcode.value + '\n  Appointment Time: ' + item.name_value_list.appointmenttime_c.value + '\n '}</Text>
+              </TouchableOpacity>
+              </View>
+            )}
+          />
+          <FlatList
             data={data}
             keyExtractor={({ id }, index) => id}
             renderItem={({ item }) => (
               <View style={S.listItem}>
-              <TouchableOpacity onPress={() => {props.lead(item) + props.pageChange(4)}} >
+              <TouchableOpacity onPress={() => {
+                props.lead(item); 
+                console.log(props.product)
+                console.log(props.product)
+              props.pageChange(props.product)}} >
                 <Text>{'ID: ' + item.id + '\n  Rep Name: ' + item.name_value_list.rep_name_c.value  + '\n  Name: ' + item.name_value_list.name.value  + '\n  Phone: ' + item.name_value_list.phone_home.value + '\n  Address: ' + item.name_value_list.primary_address_street.value + '\n  Post Code: ' + item.name_value_list.primary_address_postalcode.value + '\n  Appointment Time: ' + item.name_value_list.appointmenttime_c.value + '\n '}</Text>
               </TouchableOpacity>
               </View>

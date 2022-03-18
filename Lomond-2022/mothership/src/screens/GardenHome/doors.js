@@ -59,7 +59,7 @@ function Untitled(props) {
 
     <View style={{flexDirection: 'row', justifyContent: 'center', alignContent: 'center', paddingHorizontal: 20, marginTop: 50,}}>
     <TouchableOpacity 
-         onPress={()=> props.pageChange(7)}
+         onPress={()=> props.pageChange(5)}
          style={{ marginHorizontal: 20, }}
          >
           <View style={styles.bUTTON}>
@@ -69,7 +69,7 @@ function Untitled(props) {
 
 
         <TouchableOpacity 
-         onPress={()=> props.pageChange(9)}
+         onPress={()=> props.pageChange(7)}
          style={{ marginHorizontal: 20, }}
          >
           <View style={styles.bUTTON}>

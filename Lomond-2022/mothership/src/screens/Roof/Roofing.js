@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
 
 import Lightbox from 'react-native-lightbox';
-import Carousel from 'react-native-looped-carousel';
+// import Carousel from 'react-native-looped-carousel';
 
 const BASE_PADDING = 10;
 

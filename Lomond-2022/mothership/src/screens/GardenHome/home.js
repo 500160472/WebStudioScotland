@@ -29,7 +29,7 @@ function Untitled(props) {
 <ScrollView>
 
         <TouchableOpacity 
-         onPress={()=> props.pageChange(6)}
+         onPress={()=> props.pageChange(2)}
          >
         <View style={styles.bUTTON}>
             <Text style={{fontSize: 22,}}>CONTINUE</Text>

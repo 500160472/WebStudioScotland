@@ -45,7 +45,7 @@ function Untitled(props) {
 
     <View style={{flexDirection: 'row', justifyContent: 'center', alignContent: 'center', paddingHorizontal: 20, marginTop: 50,}}>
     <TouchableOpacity 
-         onPress={()=> props.pageChange(9)}
+         onPress={()=> props.pageChange(7)}
          style={{ marginHorizontal: 20, }}
          >
           <View style={styles.bUTTON}>
@@ -55,7 +55,7 @@ function Untitled(props) {
 
 
         <TouchableOpacity 
-         onPress={()=> props.pageChange(11)}
+         onPress={()=> props.pageChange(9)}
          style={{ marginHorizontal: 20, }}
          >
           <View style={styles.bUTTON}>
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
   },
   image: {
-    width: 917,
+    // width: 917,
     height: 541,
     position: "relative",
     // top: 229,

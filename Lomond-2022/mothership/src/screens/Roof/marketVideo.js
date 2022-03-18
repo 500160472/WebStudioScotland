@@ -46,7 +46,7 @@ export default function MarketVideo(props){
 
 </ScrollView>
         </View>
-        <Footer previousPage={N.ROOFING[12]} currentPage={N.ROOFING[13]} nextPage={N.ROOFING[14]} pageChange={(pageNum) => props.pageChange(pageNum)} />
+        <Footer previousPage={N.ROOFING[16]} currentPage={N.ROOFING[17]} nextPage={N.ROOFING[18]} pageChange={(pageNum) => props.pageChange(pageNum)} />
 
 
       </View>

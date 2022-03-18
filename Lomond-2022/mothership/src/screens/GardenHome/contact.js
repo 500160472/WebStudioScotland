@@ -31,19 +31,19 @@ function Untitled(props) {
     
     
     <View style={{backgroundColor: '#fff',flex:3, height: 600, borderRadius: 12, justifyContent: 'center', alignContent: 'center', padding: 40,}}>
-      <Text style={{textAlign: 'center'}}>WIDTH *m</Text>
+      <Text style={{textAlign: 'center'}}>FIRST NAME</Text>
       <TextInput style={styles.input}></TextInput>
-      <Text style={{textAlign: 'center'}}>DEPTH *m</Text>
+      <Text style={{textAlign: 'center'}}>LAST NAME</Text>
       <TextInput style={styles.input}t></TextInput>
-      <Text style={{textAlign: 'center'}}>DEPTH *m</Text>
+      <Text style={{textAlign: 'center'}}>EMAIL</Text>
       <TextInput style={styles.input}t></TextInput>
-      <Text style={{textAlign: 'center'}}>DEPTH *m</Text>
+      <Text style={{textAlign: 'center'}}>PHONE</Text>
       <TextInput style={styles.input}t></TextInput>
-      <Text style={{textAlign: 'center'}}>DEPTH *m</Text>
+      <Text style={{textAlign: 'center'}}>ADDRESS</Text>
       <TextInput style={styles.input}t></TextInput>
-      <Text style={{textAlign: 'center'}}>DEPTH *m</Text>
+      <Text style={{textAlign: 'center'}}>POST CODE</Text>
       <TextInput style={styles.input}t></TextInput>
-      <Text style={{textAlign: 'center'}}>DEPTH *m</Text>
+      <Text style={{textAlign: 'center'}}>SURVEY DATE</Text>
       <TextInput style={styles.input}t></TextInput>
     </View>
     
@@ -57,7 +57,7 @@ function Untitled(props) {
 
     <View style={{flexDirection: 'row', justifyContent: 'center', alignContent: 'center', paddingHorizontal: 20, marginTop: 50, marginBottom: 160,}}>
     <TouchableOpacity 
-         onPress={()=> props.pageChange(5)}
+         onPress={()=> props.pageChange(9)}
          style={{ marginHorizontal: 20, }}
          >
           <View style={styles.bUTTON}>
@@ -67,7 +67,7 @@ function Untitled(props) {
 
 
         <TouchableOpacity 
-         onPress={()=> props.pageChange(7)}
+         onPress={()=> props.pageChange(11)}
          style={{ marginHorizontal: 20, }}
          >
           <View style={styles.bUTTON}>
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
   },
   image: {
-    width: 917,
+    // width: 917,
     height: 541,
     position: "relative",
     // top: 229,

@@ -16,7 +16,7 @@ import {
 import Checkbox from 'expo-checkbox';
  
 import Lightbox from 'react-native-lightbox';
-import Carousel from 'react-native-looped-carousel';
+// import Carousel from 'react-native-looped-carousel';
 import TimeLineBox from '../../components/TimelineBox';
 import S from '../../constants/c1--Styles';
 

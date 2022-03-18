@@ -29,7 +29,6 @@ function Untitled(props) {
 <ScrollView style={{width: '100%', paddingTop: 76}}>
     <View style={{flexDirection: 'row', justifyContent: 'center', alignContent: 'center', paddingHorizontal: 20}}>
     
-    
     <View style={{backgroundColor: '#fff',flex:3, height: 300, borderRadius: 12, justifyContent: 'center', alignContent: 'center', padding: 40,}}>
       <Text style={{textAlign: 'center'}}>WIDTH *m</Text>
       <TextInput style={styles.input}></TextInput>
@@ -47,7 +46,7 @@ function Untitled(props) {
 
     <View style={{flexDirection: 'row', justifyContent: 'center', alignContent: 'center', paddingHorizontal: 20, marginTop: 50,}}>
     <TouchableOpacity 
-         onPress={()=> props.pageChange(5)}
+         onPress={()=> props.pageChange(3)}
          style={{ marginHorizontal: 20, }}
          >
           <View style={styles.bUTTON}>
@@ -57,7 +56,7 @@ function Untitled(props) {
 
 
         <TouchableOpacity 
-         onPress={()=> props.pageChange(7)}
+         onPress={()=> props.pageChange(5)}
          style={{ marginHorizontal: 20, }}
          >
           <View style={styles.bUTTON}>
@@ -127,7 +126,7 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
   },
   image: {
-    width: 917,
+    // width: 917,
     height: 541,
     position: "relative",
     // top: 229,

@@ -57,12 +57,12 @@ export default function Showhome(props){
     }
     
 
-    const [firstName, setFirstName] = useState(props.lead.name_value_list.name.value || '');
+    const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [address, setAddress] = useState(props.lead.name_value_list.primary_address_street.value || '');
-    const [postCode, setPostCode] = useState(props.lead.name_value_list.primary_address_postalcode.value || '');
+    const [address, setAddress] = useState('');
+    const [postCode, setPostCode] = useState('');
     const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState(props.lead.name_value_list.phone_home.value || '');
+    const [phone, setPhone] = useState('');
     const [mobile, setMobile] = useState('');
 
 
@@ -139,6 +139,18 @@ let customer = {
 
 
 
+
+
+
+
+
+if (props.lead.name_value_list != ''){
+    setFirstName(props.lead.name_value_list.name.value.split(' ')[0]);
+    setLastName(props.lead.name_value_list.name.value.split(' ')[1]);
+    setAddress(props.lead.name_value_list.primary_address_street.value);
+    setPostCode(props.lead.name_value_list.primary_address_postalcode.value);
+    setPhone(props.lead.name_value_list.phone_home.value);
+}
 
 
     return (
@@ -398,7 +410,7 @@ let customer = {
 </ScrollView>
 </View>
 
- <Footer previousPage={N.ROOFING[6]} currentPage={N.ROOFING[7]} nextPage={N.ROOFING[8]} pageChange={(pageNum) => {
+ <Footer previousPage={N.ROOFING[10]} currentPage={N.ROOFING[11]} nextPage={N.ROOFING[12]} pageChange={(pageNum) => {
      props.setShowhome(JSON.stringify(showhome)); 
      props.setCustomer(JSON.stringify(customer)); 
      sendEmail();

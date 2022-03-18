@@ -34,7 +34,7 @@ export default function Market1(props){
 
         </View>
 
-        <Footer previousPage={N.ROOFING[7]} currentPage={N.ROOFING[8]} nextPage={N.ROOFING[9]} pageChange={(pageNum) => props.pageChange(pageNum)} />
+        <Footer previousPage={N.ROOFING[11]} currentPage={N.ROOFING[12]} nextPage={N.ROOFING[13]} pageChange={(pageNum) => props.pageChange(pageNum)} />
 
 
       </View>
