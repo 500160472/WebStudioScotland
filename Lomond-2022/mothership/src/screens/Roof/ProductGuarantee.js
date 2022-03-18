@@ -39,12 +39,13 @@ export default function RoofingInstallation(props){
               </Text>
               <View style={{marginTop: 30, width: '100%', padding: 12, backgroundColor: 'yellow'}}>
                 <Text style={S.subTitleDark}>
+                // TODO add closing question data
                   TESTING QUESTIONS
                 </Text>
               </View>
               </View>
               <View style={{ flex: 1 }}>
-                <Image source={O.ROOFING.IMAGES.PRODUCT_GUARANTEE} style={{ width: '100%', height: '70%' }} />
+                <Image source={O.ROOFING.IMAGES.PRODUCT_GUARANTEE} style={{ width: '100%', height: '86%' }} />
               </View>
             </View>
           

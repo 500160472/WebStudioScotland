@@ -29,5 +29,37 @@ module.exports = {
             PAGE_NUMBER : '6',
             TITLE : 'Reasons For Change',
         },
+        {
+            PAGE_NUMBER : '7',
+            TITLE : 'Showhome',
+        },
+        {
+            PAGE_NUMBER : '8',
+            TITLE : 'Marketplace',
+        },
+        {
+            PAGE_NUMBER : '9',
+            TITLE : 'Marketplace 2',
+        },
+        {
+            PAGE_NUMBER : '10',
+            TITLE : 'Marketplace 3',
+        },
+        {
+            PAGE_NUMBER : '11',
+            TITLE : 'Marketplace 4',
+        },
+        {
+            PAGE_NUMBER : '12',
+            TITLE : 'Marketplace 5',
+        },
+        {
+            PAGE_NUMBER : '13',
+            TITLE : 'Marketplace Video',
+        },
+        {
+            PAGE_NUMBER : '14',
+            TITLE : 'Products',
+        },
     ],
 }

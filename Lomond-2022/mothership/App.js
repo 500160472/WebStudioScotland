@@ -17,6 +17,7 @@ export default class App extends React.Component {
     },
     response: { },
   };
+  
 
   autherizedPages = () => {
     if (this.state.authenticated === false){

@@ -47,7 +47,7 @@ import D from '../constants/c8--Data';
 
           // console.log(data);
           // return Response;
-              // alert(Response);
+              // alert(Response);ß
               // console.log(Response);
                 // Response.map((item, index) => {
                 // console.log(item);})
@@ -58,33 +58,14 @@ import D from '../constants/c8--Data';
         .finally(() => setLoading(false));
     
       }, [])
-  // export default class Page2 extends React.Component {
-  //   render() {
+
     return (
-      
-      // <View style={styles.container}>
-      //   <Text> page 2</Text>
-      //   <TouchableOpacity onPress={()=> this.props.pageChange(1)}>
-      //     <Text>
-      //     {/* {Response[0].username} */}
-      //     {/* {this.props.response[0].FullName} ----  */}
-      //       Go to page 1
-      //     </Text>
-      //   </TouchableOpacity>
-      //   <TouchableOpacity style={styles.button} onPress={() => leads(this.props.response[0].username)}>
-      //     <Text style={{textAlign: 'center'}}>
-      //       Submit
-      //     </Text>
-      //   </TouchableOpacity>
-
-      // </View>
-
 
 
       <View style={{ flex: 1, padding: 24 }}>
 
           <Text style={[S.headerText,{paddingBottom: 30}]}> LEADS </Text>
-
+  {/* TODO FIX LOADING STYLES */}
       {isLoading ? <Text>Loading...</Text> : 
       ( <View style={{ flex: 1, flexDirection: 'column', justifyContent:  'space-between'}}>
           {/* <Text style={{ fontSize: 18, color: 'green', textAlign: 'center'}}>{data.title}</Text>

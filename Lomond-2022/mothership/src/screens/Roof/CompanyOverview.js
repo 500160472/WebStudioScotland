@@ -27,8 +27,8 @@ export default function CompanyOverview(props){
 
         <View style={S.mainContainerLight}>
           <ScrollView>
-           <Text>{props.lead.id}</Text> 
-           <Text>{props.lead.name_value_list.rep_name_c.value}</Text> 
+           
+           {/* <Text>{props.lead.name_value_list.rep_name_c.value}</Text>  */}
             <Image source={O.ROOFING.IMAGES.HEADER} style={S.headerImage} />
             <Image source={O.ROOFING.IMAGES.ACCREDITATIONS} style={S.imageFullWidth} />
             

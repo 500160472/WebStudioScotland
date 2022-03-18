@@ -35,12 +35,12 @@ render() {
         {/* <View style={styles.containerBox}> */}
         <TouchableOpacity style={S.buttonLight} onPress={()=> this.props.pageChange(2)}>
           <Text style={S.buttonText}>
-            LEADS
+            ROOFS
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={S.buttonLight} onPress={()=> this.props.pageChange(5)}>
           <Text style={S.buttonText}>
-            DEALS
+            GARDEN HOMES
           </Text>
         </TouchableOpacity>
       {/* </View> */}

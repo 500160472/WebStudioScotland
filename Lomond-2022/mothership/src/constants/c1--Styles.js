@@ -218,5 +218,37 @@ export default {
       marginBottom: 20,
       borderRadius: 26,
   },
+
+  // CHECKBOX STYLES
+  borderButton: {
+    width: 300,
+    height: 60,
+    borderWidth: 3,
+    borderColor: "rgba(187,187,187,1)",
+    borderRadius: 10,
+    backgroundColor: "rgba(255,255,255,1)",
+    flexDirection: "row"
+  },
+  row:{
+    height: 41,
+    flexDirection: "row",
+    flex: 1,
+    marginRight: 17,
+    marginLeft: 13,
+    marginTop: 6
+  },
+  paragraph: {
+    fontSize: 16,
+    color: "#121212",
+    height: 23,
+    width: 220,
+    textAlign: "left",
+    // lineHeight: 42,
+    marginLeft: 10,
+    marginTop: 12
+  },
+  checkbox: {
+    margin: 10,
+  },
 };
 
