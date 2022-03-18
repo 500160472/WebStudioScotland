@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Documentation Page</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h3 class="center alt">&ldquo;React Native Online Radio App Template&rdquo; Documentation by &ldquo;Potyguara Tupinambás&rdquo; v1.1.0</h3>
+		<hr>
+		<h1 class="center">&ldquo;React Native Online Radio App Template&rdquo;</h1>
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 04/09/2021<br>
+					By: Potyguara Tupinambás<br>
+					Email: <a href="mailto:p.tupinambas@gmail.com">p.tupinambas@gmail.com</a>
+					</strong>
+				</p>
+			</div>
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my app template. If you have any questions that are beyond the scope of this help file, please feel free to email via my CodeCanyon user page contact form <a href="https://codecanyon.net/user/ptupi">here</a>. Thanks so much!</p>
+			</div>
+		</div>
+		<hr>
+		<h2 id="toc" class="alt">Summary</h2>
+		<ol class="alpha">
+			<li><a href="#buyer">What You Should Know as Buyer</a></li>
+			<li><a href="#yarnInstallation">YARN Installation</a> <em class="quiet small">(You can use either, but I recommend YARN)</em></li>
+			<li><a href="#installDependencies">Install Project Dependencies</a></li>
+			<li><a href="#installDependenciesIos">Finish Project Dependencies (Mac OS)</a> <em class="quiet small">(Only on Mac OS)</em></li>
+			<li><a href="#radioFunction">Radio Player Function</a></li>
+			<li><a href="#localizationSupport">Localization Support</a></li>
+			<li><a href="#details">Project Details</a></li>
+			<li><a href="#updates">ChangeLog</a></li>
+		</ol>
+		<hr>
+		<h3 id="buyer"><strong>A) What You Should Know as Buyer</strong> - <a href="#toc">top</a></h3>
+		<p>You must have React Native knowledge or you must me inclined to learn it.</p>
+		<p>You also need to be able to install React Native and its dependencies on your machine. To do that I recommend you to use the React Native official installation guide <a href="https://facebook.github.io/react-native/">here</a>.</p>
+		<p>And last, but not least, in order to modify the app template, you must have knowledge in mobile technologies such as JavaScript, Android Studio, XCode.</p>
+		<hr>
+		<h3 id="yarnInstallation"><strong>B) YARN Installation</strong> - <a href="#toc">top</a></h3>
+		<p>To install your project dependencies, you must first install YARN on your system. From there you can go to the Installation docs.</p>
+		<p>YARN "Getting Started" page: <a href="https://classic.yarnpkg.com/en/docs/getting-started">here</a>.</p>
+		<p>With YARN installed, you can proceed to the next step.</p>
+		<hr>
+		<h3 id="installDependencies"><strong>C) Install Project Dependencies</strong> - <a href="#toc">top</a></h3>
+		<p>With YARN installed, you need to install the project dependencies. To do that you should open the command prompt (Windows), or terminal (Mac OS) ON YOUR PROJECT FOLDER and type the following commmand:</p>
+		<p><pre>yarn install</pre></p>
+		<hr>
+		<h3 id="installDependenciesIos"><strong>D) Finish Project Dependencies (Mac OS)</strong> - <a href="#toc">top</a></h3>
+		<p>If you are on a Mac OS, you need to finish installing your project dependencies by running the following commands on terminal (from your PROJECT FOLDER):</p>
+		<pre>cd ios</pre>
+		<pre>pod install</pre>
+		<hr>
+		<h3 id="radioFunction"><strong>E) Radio Player Function</strong> - <a href="#toc">top</a></h3>
+		<p>This app template was built with a radio player from react-native-track-player plugin. Here are some details about it to get you started:</p>
+		<ol>
+			<li>Starting radio stations available are inside <strong>"{projectName}/src/states/radio.state.js"</strong> file</li>
+			<li>To add more radio stations you should gather the <strong>station name, image and AACP url</strong></li>
+			<li>The AACP url can be obtained by installing an <strong>extension</strong> named Video DownloadHelper on you <strong>web browser</strong></li>
+			<li>You can customize background play settings by working on the audioBackgroundBehavior function inside "{projectName}/src/actions/radio.action.js" file</li>
+			<li>For more details about the <strong>react-native-track-player</strong> plugin, click <a href="https://react-native-track-player.js.org/">here</a></li>
+			<ol>
+				<li><strong>IMPORTANT:</strong> To allow background audio playback on iOS, you need to activate the "Audio, Airplay and Picture in Picture" background mode in Xcode. Without activating it, the audio will only play when the app is in the foreground, as described <a href="https://react-native-track-player.js.org/background/">here</a></li>
+			</ol>
+		</ol>
+		<hr>
+		<h3 id="localizationSupport"><strong>F) Localization Support</strong> - <a href="#toc">top</a></h3>
+		<p>This app template currently has enUS language, but you can simply add more languages at the "{projectName}/src/languages" folder if you want. To do that, add a "xxYY.language.js" file (similar to the "enUS.language.js") and export it on "{projectName}/src/languages/languages.js" file.</p>
+		<hr>
+		<h3 id="details"><strong>G) Project Details</strong> - <a href="#toc">top</a></h3>
+		<p>Important informations about this app template:</p>
+		<ul>
+			<li>React Native version: 0.64.0, more details <a href="https://reactnative.dev/">here</a></li>
+			<li>Using React Navigation plugin, version 5.9.4, more details <a href="https://reactnavigation.org/">here</a></li>
+			<ol>
+				<li>Stack navigator added (check {projectName}/src/routes/index.js file)</li>
+			</ol>
+			<li>Using global hooks plugin, more details <a href="https://github.com/andregardi/use-global-hook#example">here</a></li>
+			<li>Using react-native-vector-icons, more details <a href="https://github.com/oblador/react-native-vector-icons">here</a></li>
+			<li>Using react-native-track-player version 1.2.7, more details <a href="https://react-native-track-player.js.org/">here</a></li>
+		</ul>
+		<hr>
+		<h3 id="updates"><strong>H) ChangeLog</strong> - <a href="#toc">top</a></h3>
+		<p><strong>Update 1.1.0 | 04/13/2021</strong></p>
+		<li>Added background play on notifications tray with play/pause/stop control</li>
+		<br>
+		<hr>
+		<p>Once again, thank you so much for purchasing this app template. As I said at the beginning, I'll be glad to help you if you have any questions relating to this application. No guarantees, but I'll do my best to assist. If you have a more general question relating to the templates on CodeCanyon, you might consider visiting the forums and asking your question.</p> 
+		<p>Best regards,</p>
+		<p class="append-bottom alt large"><strong>Potyguara Tupinambás</strong></p>
+		<img src="assets/images/mappe.png" alt="mappe Logo" style="height: 64px; margin-bottom: 24px;"/>
+		<p><a href="#toc">Go To Summary</a></p>
+		<hr class="space">
+	</div>
+</body>
+</html>
