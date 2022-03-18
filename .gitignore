@@ -1,6 +1,7 @@
 .DC_Store
 *.DC_Store
 .DC_Store*
+web-build*
 # Logs
 logs
 *.log
