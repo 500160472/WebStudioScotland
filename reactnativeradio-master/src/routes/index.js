@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
-import {StatusBar} from 'react-native';
+import {StatusBar, View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
@@ -23,6 +23,7 @@ function appNavigator() {
     return (
       <>
         <StatusBar backgroundColor={colors.greys[4]} barStyle="light-content" />
+        {/* <View><Text>Hey</Text></View> */}
         <LoadingScreen />
       </>
     );
