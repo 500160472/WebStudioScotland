@@ -17,6 +17,7 @@
 		8CB18B30CD784905AAA75A0E /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7F825A88DC38E74D4BBD58 /* ExpoModulesProvider.swift */; };
 		F335C9A9274D30AB00C597F3 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F335C9A8274D30AB00C597F3 /* dummy.swift */; };
 		FE25AB3F9DC203BA17D47883 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262A6A85D7FDBE24D4D054F8 /* ExpoModulesProvider.swift */; };
+		36EF7A6C75DF4D66BB049BB4 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269B1DA8C664E28B899622E /* noop-file.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		F335C9A8274D30AB00C597F3 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		F335C9AA274D350A00C597F3 /* libswiftWebKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftWebKit.tbd; path = usr/lib/swift/libswiftWebKit.tbd; sourceTree = SDKROOT; };
 		F557AEDD46CA1B9826CE7FEA /* libPods-reactnativeradio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactnativeradio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7269B1DA8C664E28B899622E /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "reactnativeradio/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		9306F6310C8B42ED82740E84 /* SplashScreen.storyboard */ = {isa = PBXFileReference; name = "SplashScreen.storyboard"; path = "reactnativeradio/SplashScreen.storyboard"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				7269B1DA8C664E28B899622E /* noop-file.swift */,
+				9306F6310C8B42ED82740E84 /* SplashScreen.storyboard */,
 			);
 			name = reactnativeradio;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				DC099B0AE8D54B4DA9FC224E /* SplashScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +470,7 @@
 				F335C9A9274D30AB00C597F3 /* dummy.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				8CB18B30CD784905AAA75A0E /* ExpoModulesProvider.swift in Sources */,
+				36EF7A6C75DF4D66BB049BB4 /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +511,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reactnativeradio.app/reactnativeradio";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -530,6 +538,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reactnativeradio.app/reactnativeradio";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -604,12 +613,14 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = reactnativeradio;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joshuafpt.reactnativename";
+				PRODUCT_NAME = "reactnativename";
 				SWIFT_OBJC_BRIDGING_HEADER = "reactnativeradio-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CODE_SIGN_ENTITLEMENTS = "reactnativeradio/reactnativeradio.entitlements";
 			};
 			name = Debug;
 		};
@@ -683,11 +694,13 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = reactnativeradio;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joshuafpt.reactnativename";
+				PRODUCT_NAME = "reactnativename";
 				SWIFT_OBJC_BRIDGING_HEADER = "reactnativeradio-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CODE_SIGN_ENTITLEMENTS = "reactnativeradio/reactnativeradio.entitlements";
 			};
 			name = Release;
 		};
@@ -754,6 +767,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.0;
+				CODE_SIGN_ENTITLEMENTS = "reactnativeradio/reactnativeradio.entitlements";
 			};
 			name = Debug;
 		};
@@ -813,6 +827,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
+				CODE_SIGN_ENTITLEMENTS = "reactnativeradio/reactnativeradio.entitlements";
 			};
 			name = Release;
 		};

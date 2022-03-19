@@ -1,4 +1,4 @@
-package com.reactnativeradio;
+package com.joshuafpt.reactnativename;
 import expo.modules.ReactActivityDelegateWrapper;
 import com.facebook.react.ReactActivityDelegate;
 

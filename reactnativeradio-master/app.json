@@ -1,6 +1,4 @@
-{ 
-  // "name": "reactnativename",
-  // "slug": "reactnativename",
+{
   "expo": {
     "name": "reactnativename",
     "slug": "reactnativename",
@@ -19,13 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.joshuafpt.reactnativename"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.joshuafpt.reactnativename"
     },
     "web": {
       "favicon": "./assets/favicon.png"
